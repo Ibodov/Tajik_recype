@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/start_background"
+    tools:context=".sreens.start.StartFragment">
+
+    <TextView
+        android:id="@+id/Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/amore_ctt"
+        android:text="БАМАЗЗА"
+
+        android:textColor="@color/logo"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <androidx.cardview.widget.CardView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="16dp"
+        app:cardPreventCornerOverlap="false"
+        android:backgroundTint="@color/detail_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Logo"
+        android:id="@+id/first_food"
+
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_first_course"
+        >
+
+        <TextView
+            android:id="@+id/first_recipe_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Первое блюдо"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/first_recipe_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/first_recipe_img"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/homshurbo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="NotSibling" />
+<!--    <Button-->
+<!--        android:id="@+id/btn_first_course"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:backgroundTint="@color/vanilla"-->
+<!--        android:text="Первое блюдо"-->
+<!--        android:fontFamily="@font/arbat_di"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintCircleRadius="15dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/Logo" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/detail_color"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/first_food">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_second_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/second_recipe_img"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/osh"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Второе блюдо"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/second_recipe_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--        <Button-->
+            <!--        android:id="@+id/btn_second_course"-->
+            <!--        android:backgroundTint="@color/vanilla"-->
+            <!--        android:layout_margin="16dp"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:textColor="@color/black"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:textSize="30sp"-->
+            <!--        android:fontFamily="@font/arbat_di"-->
+            <!--        android:text="Второе блюдо"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/btn_first_course"-->
+            <!--        app:layout_constraintEnd_toEndOf="parent"-->
+            <!--        app:layout_constraintStart_toStartOf="parent"/>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/uzor"
+
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

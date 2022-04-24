@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.smile.tajik_recype.sreens.start.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_firstCourseFragment"
+            app:destination="@id/firstCourseFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_startFragment_to_mainCourseFragment"
+            app:destination="@id/mainCourseFragment"
+            app:popEnterAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstCourseFragment"
+        android:name="com.smile.tajik_recype.sreens.first_recype.FirstRecipeFragment"
+        android:label="fragment_first_course"
+        tools:layout="@layout/fragment_first_course" >
+        <action
+            android:id="@+id/action_firstCourseFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/startFragment" />
+        <action
+            android:id="@+id/action_firstCourseFragment_to_firstCourseDetailFragment"
+            app:destination="@id/firstCourseDetailFragment"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainCourseDetailFragment"
+        android:name="com.smile.tajik_recype.sreens.main_course.MainRecipeDetailFragment"
+        android:label="fragment_main_course_detail"
+        tools:layout="@layout/fragment_main_recipe_detail" >
+        <action
+            android:id="@+id/action_mainCourseDetailFragment_to_mainCourseFragment"
+            app:destination="@id/mainCourseFragment"
+            app:popUpTo="@id/mainCourseDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainCourseFragment"
+        android:name="com.smile.tajik_recype.sreens.main_course.MainRecipeFragment"
+        android:label="fragment_main_course"
+        tools:layout="@layout/fragment_main_recype" >
+        <action
+            android:id="@+id/action_mainCourseFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment" />
+        <action
+            android:id="@+id/action_mainCourseFragment_to_mainCourseDetailFragment"
+            app:destination="@id/mainCourseDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstCourseDetailFragment"
+        android:name="com.smile.tajik_recype.sreens.first_recype.FirstRecypeDetailFragment"
+        android:label="fragment_first_course_detail"
+        tools:layout="@layout/fragment_first_course_detail" >
+        <action
+            android:id="@+id/action_firstCourseDetailFragment_to_firstCourseFragment"
+            app:destination="@id/firstCourseFragment"
+            app:popUpTo="@id/firstCourseDetailFragment" />
+    </fragment>
+</navigation>
